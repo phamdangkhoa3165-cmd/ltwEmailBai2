@@ -1,3 +1,4 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,23 +11,29 @@
 
     <p>Here is the information that you entered:</p>
 
-    <label>Email:</label>
-    <span>${sessionScope.user.email}</span><br>
-
     <label>First Name:</label>
-    <span>${sessionScope.user.firstName}</span><br>
+    <span>${sessionScope.surveyDTO.firstName}</span><br>
 
     <label>Last Name:</label>
-    <span>${sessionScope.user.lastName}</span><br>
+    <span>${sessionScope.surveyDTO.lastName}</span><br>
+
+    <label>Email:</label>
+    <span>${sessionScope.surveyDTO.email}</span><br>
 
     <label>Date of Birth:</label>
-    <span>${sessionScope.user.dateOfBirth}</span><br>
+    <span>${sessionScope.surveyDTO.dateOfBirth}</span><br>
 
-    <label>Hear From:</label>
-    <span>${sessionScope.user.hearFrom}</span><br>
+    <label>Hear About Us:</label>
+    <span>${sessionScope.surveyDTO.hearAboutUs}</span><br>
+
+    <label>Wants Updates:</label>
+    <span>${sessionScope.surveyDTO.wantsUpdates}</span><br>
+
+    <label>Wants Email:</label>
+    <span>${sessionScope.surveyDTO.wantsEmail}</span><br>
 
     <label>Contact Via:</label>
-    <span>${sessionScope.user.contactVia}</span><br>
+    <span>${sessionScope.surveyDTO.contactVia}</span><br>
 
     <p>To enter another email address, click on the Back
     button in your browser or the Return button shown below.</p>
