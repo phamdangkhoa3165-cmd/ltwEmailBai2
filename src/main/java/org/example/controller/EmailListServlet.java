@@ -51,8 +51,7 @@ public class EmailListServlet extends HttpServlet {
             UserDB.insert(user);
             SurveyDB.insert(survey);
 
-            HttpSession session = req.getSession();
-            session.setAttribute("surveyDTO", surveyDTO);
+            req.setAttribute("surveyDTO", surveyDTO);
 
             url = "/thanks.jsp";
         }
