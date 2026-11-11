@@ -15,8 +15,9 @@ label {
     margin-bottom: 0.5em;
 }
 
-input[type="text"], input[type="email"] {
+input[type="text"], input[type="email"], input[type="date"] {
     width: 15em;
+    box-sizing: border-box;
     margin-left: 0.5em;
     margin-bottom: 0.5em;
 }
