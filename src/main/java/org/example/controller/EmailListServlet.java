@@ -19,6 +19,7 @@ public class EmailListServlet extends HttpServlet {
         String url = "/index.html";
 
         String action = req.getParameter("action");
+
         if (action == null) {
             action = "join";
         }
@@ -47,6 +48,12 @@ public class EmailListServlet extends HttpServlet {
                     surveyDTO.getWantsEmail(),
                     surveyDTO.getContactVia()
             );
+
+            String[] contributors = req.getParameterValues("contactVia");
+            if (contributors != null) {
+                String contributorsList = String.join(", ", contributors);
+                surveyDTO.setContactVia(contributorsList);
+            }
 
             UserDB.insert(user);
             SurveyDB.insert(survey);
